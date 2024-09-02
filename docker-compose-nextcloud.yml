@@ -20,7 +20,7 @@ services:
     image: mariadb:10.6
     container_name: db
     restart: always
-    command: --transaction-isolation=READ-COMMITTED --log-bin=binlog --binlog-format=ROW
+    command: --transaction-isolation=READ-COMMITTED --log-bin=binlog --binlog-format=ROW --skip-innodb-read-only-compressed
     volumes:
       - db:/var/lib/mysql
     environment:
