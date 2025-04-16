@@ -7,9 +7,3 @@ sed -e 's|^mirrorlist=|#mirrorlist=|g' \
     -e 's|^# baseurl=https://repo.almalinux.org|baseurl=https://mirrors.aliyun.com|g' \
     -i.bak \
     /etc/yum.repos.d/almalinux*.repo
-
-# 恢复 (sysin)
-sed -e 's|^#mirrorlist=|mirrorlist=|g' \
-    -e 's|^baseurl=https://mirrors.aliyun.com|# baseurl=https://repo.almalinux.org|g' \
-    -i.bak \
-    /etc/yum.repos.d/almalinux*.repo
